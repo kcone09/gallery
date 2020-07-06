@@ -1,94 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="./img/favicon.ico" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/favicon.ico" />
     <title>Gallery</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <div class="header">
-        <h1>Image Gallery</h1>
-        <p>Logos, posters, sketchs </p>
+      <h1>Image Gallery</h1>
+      <p>Logos, posters, sketchs</p>
     </div>
 
     <!-- Photo Grid -->
     <div class="row">
-        <div class="column">
-            <img src="./img/Alice.jpg">
-            <img src="./img/beer.jpg">
-            <img src="./img/cake.jpg">
-            <img src="./img/dance fusion.jpg">
-            <img src="./img/ice-cream.jpg">
-            <img src="./img/milnertonbridgeclub.jpg">
-        </div>
-        <div class="column">
-            <img src="./img/Azorisize-logo.png">
-            <img src="./img/girl.jpg">
-            <img src="./img//Mercy-Mujeyi.jpg">
-            <img src="./img/my-logo.png">
-            <img src="./img/nicki.jpg">
-            <img src="./img/splash-apple.jpg">
-        </div>
-        <div class="column">
-            <img src="./img/Strawberry-Chocolate.jpg">
-            <img src="./img/virgo-empire.jpg">
-            <img src="./img/enock_art.jpg">
-            <img src="./img/Orange-or-Gold.jpg">
-            <img src="./img/pinata.jpg">
-            <img src="./img/watch1.jpg">
-        </div>
-        <div class="column">
-            <img src="./img/umbrella.jpg">
-            <img src="./img/bradlaid-logo.jpg">
-            <img src="./img/HOA.jpg">
-            <img src="./img/bula-telecoms-logo.png">
-            <img src="./img/Queen.jpg">
-            <img src="./img/girl1.jpg">
-            <img src="./img/HOA-logo.png">
-        </div>
+      <div class="column">
+        <img src="./img/Alice.jpg" />
+        <img src="./img/beer.jpg" />
+        <img src="./img/cake.jpg" />
+        <img src="./img/dance fusion.jpg" />
+        <img src="./img/ice-cream.jpg" />
+        <img src="./img/milnertonbridgeclub.jpg" />
+      </div>
+      <div class="column">
+        <img src="./img/Azorisize-logo.png" />
+        <img src="./img/girl.jpg" />
+        <img src="./img/fox logo-80.jpg" />
+        <img src="./img/Mercy-Mujeyi.jpg" />
+        <img src="./img/my-logo.png" />
+        <img src="./img/nicki.jpg" />
+        <img src="./img/splash-apple.jpg" />
+      </div>
+      <div class="column">
+        <img src="./img/Strawberry-Chocolate.jpg" />
+        <img src="./img/fish_1-80.jpg" />
+        <img src="./img/virgo-empire.jpg" />
+        <img src="./img/enock_art.jpg" />
+        <img src="./img/Orange-or-Gold.jpg" />
+        <img src="./img/pinata.jpg" />
+        <img src="./img/watch1.jpg" />
+      </div>
+      <div class="column">
+        <img src="./img/umbrella.jpg" />
+        <img src="./img/bradlaid-logo.jpg" />
+        <img src="./img/HOA.jpg" />
+        <img src="./img/bula-telecoms-logo.png" />
+        <img src="./img/Queen.jpg" />
+        <img src="./img/girl1.jpg" />
+        <img src="./img/HOA-logo.png" />
+      </div>
     </div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
 
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01">
-
-
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01" />
     </div>
 
     <script>
-        let myImage = document.querySelectorAll("img");
-        myImage.forEach((image) => {
-            image.addEventListener("click", (e) => {
-                let imgSrc = e.target.currentSrc;
-                // Get the modal
-                var modal = document.getElementById("myModal");
+      let myImage = document.querySelectorAll("img");
+      myImage.forEach((image) => {
+        image.addEventListener("click", (e) => {
+          let imgSrc = e.target.currentSrc;
+          // Get the modal
+          var modal = document.getElementById("myModal");
 
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
+          // Get the image and insert it inside the modal - use its "alt" text as a caption
 
-                var modalImg = document.getElementById("img01");
-                modal.style.display = "block";
-                modalImg.src = imgSrc;
+          var modalImg = document.getElementById("img01");
+          modal.style.display = "block";
+          modalImg.src = imgSrc;
 
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
 
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
-            });
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          };
         });
+      });
     </script>
-</body>
-
+  </body>
 </html>
